@@ -1,0 +1,8 @@
+USER=vadmin@veeva.qasource.winmodgr
+PASSWORD=krejs04ld
+FILENAME=NRX-TRX UNITS - MONTH 24 FORM.csv
+MARKET=Multiple Markets
+DATA_DATE=06/25/2016
+EMAIL=christopher.fong@veeva.com
+DATA_MAP_TEMPLATE=NRX-TRX  UNITS - MONTH 24 FORM
+MOVE_TO_PRODUCTION=TRUE

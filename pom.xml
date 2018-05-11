@@ -1,0 +1,213 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.czeczotka.bdd</groupId>
+    <artifactId>cucumber-jvm-maven</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>cucumber-jvm-maven</name>
+    <description>Cucumber calculator</description>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <appium.version>3.3.0</appium.version>
+        <testng.version>6.9.10</testng.version>    	
+    </properties>
+  
+    <dependencies>
+
+        
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-testng</artifactId>
+		    <version>1.1.5</version>
+		</dependency>
+ 		-->
+        
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.1.8</version>
+            <scope>compile</scope>
+            <!-- <scope><Dependency Scope></scope>:
+				- compile
+					Ref:http://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html#Dependency_Scope
+					This is the default scope, used if none is specified. Compile dependencies are available in all classpaths of a project. 
+					Furthermore, those dependencies are propagated to dependent projects.
+				- test
+					This scope indicates that the dependency is not required for normal use of the application, 
+					and is only available for the test compilation and execution phases. This scope is not transitive.
+			-->
+        </dependency>
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.1.8</version>
+            <scope>test</scope>
+        </dependency>
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-jvm-deps 
+			This project repackages the dependencies of Cucumber-JVM into a new package, 
+			cucumber.deps.*. This is to prevent conflicts when Cucumber-JVM is used along 
+			with other project depending on the same libraries.
+		-->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-jvm-deps</artifactId>
+		    <version>1.0.5</version>
+		</dependency>
+		
+	    <dependency>
+	        <groupId>info.cukes</groupId>
+	        <artifactId>gherkin</artifactId>
+	        <version>2.12.2</version>
+	    </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+	      <groupId>log4j</groupId>
+	      <artifactId>log4j</artifactId>
+	      <version>1.2.17</version>
+		</dependency>
+	    <dependency>
+	      <groupId>org.seleniumhq.selenium</groupId>
+	      <artifactId>selenium-java</artifactId>
+	      <version>3.0.1</version>
+	    </dependency> 
+        <!-- Appium -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>${appium.version}</version>
+        </dependency>
+        <!-- testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>	    
+    
+<!-- 	     
+	    <dependency>
+	      <groupId>io.appium</groupId>
+	      <artifactId>java-client</artifactId>
+	      <version>3.4.0</version>
+	    </dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+		</dependency>
+-->	    
+	    <dependency>
+	      <groupId>com.google.code.gson</groupId>
+	      <artifactId>gson</artifactId>
+	      <version>2.2.4</version>
+	    </dependency>        
+
+<!-- Above Standard Plugins -->
+        
+        <dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-email</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+ 		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.ant/ant -->
+		<dependency>
+		    <groupId>org.apache.ant</groupId>
+		    <artifactId>ant</artifactId>
+		    <version>1.8.2</version>
+		</dependency>		
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>19.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.gdata/core -->
+		<dependency>
+		    <groupId>com.google.gdata</groupId>
+		    <artifactId>core</artifactId>
+		    <version>1.47.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.force.api/force-partner-api -->
+		<dependency>
+		    <groupId>com.force.api</groupId>
+		    <artifactId>force-partner-api</artifactId>
+		    <version>22.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.mkolisnyk/cucumber-reports -->
+		<dependency>
+		    <groupId>com.github.mkolisnyk</groupId>
+		    <artifactId>cucumber-reports</artifactId>
+		    <version>0.0.3</version>
+		</dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                	<!-- <fork>true</fork>
+						Forked Test Execution:
+						Ref:http://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html
+						The parameter forkCount defines the maximum number of JVM processes that Surefire 
+						will spawn concurrently to execute the tests.
+					-->
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+        
+	    <resources>
+	      <resource>
+	        <directory>src/test/resources</directory>
+	        <includes>
+	          <include>**/*.feature</include>
+	        </includes>
+	      </resource>
+	    </resources>
+	    
+    </build>
+
+</project>

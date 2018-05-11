@@ -1,0 +1,28 @@
+Spectrum/Bright House cable [Acc:00322782673-05-001]
+Arris SURFboard: SB6190
+
+MAC: 5C E3 0E 3C 59 17
+1-855-657-7328
+
+test -Dcucumber.options="--tags @RemoteMeetingEndToEnd" -DargLine="-Dplatform=iPad -DplatformVersion=10.2 -DattendeePlatforms=Android;Android -DRemotePresenter=iPad -DplatformVersions=6.0.1;6.0.1 -DhubURLs=127.0.0.1;127.0.0.1 -Dudids=84B7N16411001163;041604abd64a0802 -DportNumbers=4733;4743 -Dorg=lr -DUSERLANGUAGE=en_US -DdeviceNames='Nexus 6P;Note5' -DdeviceName='iPad Air 2'"
+
+test -Dcucumber.options="--tags @CALC" -DargLine="-Dplatform=Android -DdeviceNames='MicromaxA311'"
+
+test -Dcucumber.options="--tags @MSHOP" -DargLine="-Dplatform=Android -DdeviceNames='MicromaxA311'"
+
+@12345 @MSHOP @Android @Serial_MSHOP @MicromaxA311 @Serial @smoke
+
+@12345 @CALC @Android @Serial_CALC @MicromaxA311 @Serial @smoke
+
+NHTSA # 	Recall # 	Status 
+15V-205 		
+Description 
+FRONT PASSENGER SEAT OCCUPANCY SENSOR MAT 
+
+
+<!-- <fork>true</fork>
+Forked Test Execution:
+Ref:http://maven.apache.org/surefire/maven-surefire-plugin/examples/fork-options-and-parallel-execution.html
+The parameter forkCount defines the maximum number of JVM processes that Surefire 
+will spawn concurrently to execute the tests.
+-->
